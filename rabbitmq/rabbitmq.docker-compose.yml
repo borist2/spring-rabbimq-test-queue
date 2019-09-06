@@ -1,0 +1,12 @@
+version: '3.7'
+
+services:
+  rabbitmq:
+    build:
+      dockerfile: rabbitmq.dockerfile
+      context: .
+    image: rabbitmq-test
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+      - "61613:61613"
