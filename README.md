@@ -53,6 +53,6 @@ Backend will try to send message to this user and will print something like this
 `Received ERROR {message=[precondition_failed], content-type=[text/plain], version=[1.0,1.1,1.2], content-length=[170]} session=_system_ text/plain payload=PRECONDITION_FAILED - inequivalent arg 'auto_delete' for queue 'some-queue-user8...(truncated)`
 
 
-This shows that application tries to send message to correct queue, but it receives error.
+This shows that application tries to send message to correct queue, but it receives error and message is never received by client.
 
 From [RabbitMQ STOMP Documentation](https://www.rabbitmq.com/stomp.html#queue-parameters) this should allow of creating and sending on auto delete queues.
